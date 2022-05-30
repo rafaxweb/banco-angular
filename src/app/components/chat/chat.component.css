@@ -1,9 +1,9 @@
 /* Chat */
 .main-aside {
-    position: fixed;    
+    position: fixed;
     bottom: 0;
     right: 0;
-    background-color: rgb(235, 255, 255);
+    background-color: white;
     border: 2px solid black;
     border-radius: 10px 10px 0px 5px;
     height: 300px;
@@ -39,7 +39,7 @@
     font-weight: 700;
 }
 
-/* Formulario */  
+/* Formulario */
 .main-aside__submit {
     position: absolute;
     bottom: 5%;
@@ -74,7 +74,7 @@
     text-align: right;
     border-radius: 10px 10px 0px 0px;
     background-color: #DCF9E2;
-    position: fixed;    
+    position: fixed;
     bottom: 2px;
     right: 2px;
 }
@@ -84,7 +84,7 @@
     color: #06230C;
     border: 0px solid black;
     border-radius: 15px;
-    
+
 }
 
 .buttom_close:hover {

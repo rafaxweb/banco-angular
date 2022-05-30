@@ -5,12 +5,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ChatService {
-  
-  private servidorWebSocket = 'ws://alejandrotour.ddns.net:8081'
-  //private servidorWebSocket = 'ws://localhost:3000'
+
+  //private servidorWebSocket = 'ws://alejandrotour.ddns.net:8081'
+  private servidorWebSocket = 'ws://localhost:3000'
   private ws: WebSocket;
 
-  constructor() { 
+  constructor() {
     console.log('Constructor del Chat');
     this.ws = new WebSocket(this.servidorWebSocket)
     this.ws.onopen = this.onOpen;
@@ -28,7 +28,7 @@ export class ChatService {
   enviarMensaje(mensaje: MensajeChat): void {
     this.ws.send(JSON.stringify(mensaje));
   }
-  
+
   escuchar(callback: Function): void {
     this.ws.onmessage = (evento: MessageEvent) => {
       callback(JSON.parse(evento.data));

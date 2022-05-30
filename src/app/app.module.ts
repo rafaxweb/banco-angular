@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './components/login/login.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
+import { ChatAmpliadoComponent } from './chat-ampliado/chat-ampliado.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
     FooterComponent,
     GestoresComponent,
     LoginComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    ChatAmpliadoComponent
   ],
   imports: [
     BrowserModule,
