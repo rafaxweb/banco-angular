@@ -130,3 +130,13 @@ table.blueTable tfoot .links a {
     background-color:#A7F5AE;
     color:#145216;
 }
+
+.error {
+    font-size: 0.75em;
+    width: 75%;
+    margin: auto;
+    background-color: rgba(246, 31, 31, 0.43);
+    color: brown;
+    padding: 10px;
+    border: 1px solid red;
+}

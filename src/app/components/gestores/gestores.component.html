@@ -10,47 +10,38 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>user</td>
-                    <td>email@dominio.com</td>
+                <tr *ngFor="let gestor of gestores">
+                    <td>{{gestor.id}}</td>
+                    <td>{{gestor.usuario}}</td>
+                    <td>{{gestor.correo}}</td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td>otro_user</td>
-                    <td>otro_email@dominio.com</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>last_user</td>
-                    <td>last_email@dominio.com</td>
-                </tr>
-
             </tbody>
         </table>
     </article>
 
 
     <article class="gestores-article big-gestores">
-        <form action="">
+        <div action="">
+            <p>Añadir nuevos gestores <br>(requiere inicio de sesión)</p>
             <div class="form__element">
                 <label for="user" class="form__label">Usuario</label>
-                <input type="text" name="user" class="form__input" id="user">
+                <input #inputUser type="text" name="user" class="form__input" id="user">
             </div>
 
             <div class="form__element">
                 <label for="pass" class="form__label">Contraseña</label>
-                <input type="password" name="pass" id="pass" class="form__input">
+                <input #inputPass type="password" name="pass" id="pass" class="form__input">
             </div>
 
             <div class="form__element">
                 <label for="email" class="form__label">Email</label>
-                <input type="email" name="email" class="form__input" id="email" >
+                <input #inputEmail type="email" name="email" class="form__input" id="email" >
             </div>
 
             <div class="form__element">
-                <input type="submit" value="Añadir" class="form__bottom">
+                <input type="submit" value="Añadir" class="form__bottom" (click)="onAgregarGestor(inputUser, inputPass, inputEmail)">
             </div>
-        </form>
+            <p class="error" *ngIf="!agregarGestorRespuesta">Error, compruebe que no existe un gestor con estos datos, o que los datos introducidos son correctos</p>
+        </div>
     </article>
 </div>

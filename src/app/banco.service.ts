@@ -120,7 +120,7 @@ export class BancoService {
       ajax({
         url: `${this.servicioUrl}/gestores/` + usuario,
         method: 'GET',
-        cabeceras: {
+        headers: {
           Authorization: `Basic ${token}`
         }
       }, (datos: any) => {
@@ -135,18 +135,32 @@ export class BancoService {
     return new Promise((resolve, reject) => {
       
       const token = localStorage.getItem('token');
+
+      const user = gestor.usuario;
+      const pass = gestor.password;
+      const correo = gestor.correo;
+      console.log(correo);
+      
+
       ajax({
         url: `${this.servicioUrl}/gestores/`,
         method: 'POST', 
-        cabeceras: {
+        headers: {
           Authorization: `Basic ${token}`
         },
-        body: JSON.stringify(gestor)
-      }, () => {
+        body: JSON.stringify({
+          "usuario": user,
+          "password": pass,
+          "correo": correo
+        })
+        //JSON.stringify(gestor)
+      }, (datos: string) => {
 
-      })
-
+        const respuesta: Respuesta = JSON.parse(datos);
+        console.log(datos);        
+        console.log(respuesta); 
+        resolve(respuesta.ok);     
+      });
     });
-  } 
-
+  }
 }

@@ -1,5 +1,6 @@
 export interface Gestor {
-    id: number,
+    id?: number,
     correo: string,
-    usuario: string
+    usuario: string,
+    password?: string
 }
