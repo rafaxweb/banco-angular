@@ -1,0 +1,16 @@
+<h1 class="main-login__title">Iniciar Sesión</h1>
+<!-- Formulario -->
+<div action="" class="login-form">
+
+  <label for="usuario">Usuario</label>
+  <input #inputUser type="text" name="usuario" id="usuario" placeholder="usuario" minlength="4">
+  <br>
+
+  <label for="password">Contraseña</label>
+  <input #inputPass type="password" name="password" id="password" placeholder="******" minlength="4">
+  <br>
+
+  <input type="submit" value="Enviar" (click)="onLogin(inputUser, inputPass)">
+
+  <p class="login-form__auth" *ngIf="authMessage">Autenticación incorrecta</p>
+</div>

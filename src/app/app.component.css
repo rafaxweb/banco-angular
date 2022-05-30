@@ -1,0 +1,35 @@
+app-chat {
+  position: absolute;
+  z-index: 2;
+}
+
+.main__main {
+  margin-top: 50px;
+}
+
+.buttom_chat {
+  z-index: 2;
+  position: absolute;
+  bottom: 150%;
+}
+
+.main__main ul {
+  position: absolute;
+  top: 10%;
+  left: 2%;
+  border: 1px solid black;
+}
+
+@media screen and (max-width: 580px) {
+  .main__main {
+    position: relative;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-height: 420px) {
+  .main__main {
+    height: 50vw;
+    overflow-y: scroll;
+  }
+}

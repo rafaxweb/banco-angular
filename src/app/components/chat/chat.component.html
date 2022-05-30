@@ -1,0 +1,21 @@
+<div class="buttom">
+  <button class="buttom_close" (click)="ocultarChat()">Abrir/Cerrar Chat</button>
+</div>
+<aside class="main-aside" *ngIf="mostrarChat">
+  
+  
+  <div class="main-aside__title">
+    Chat
+  </div>
+
+  <div class="main-aside__mensajes">
+    <p *ngFor="let mensaje of mensajes" class="main-aside__mensaje">{{mensaje.texto}}</p>
+  </div>
+
+  <div class="main-aside__submit">
+    <span action="" class="main-aside__submit-form">
+      <input #inputMensaje type="text" name="box__chat" id="box__chat" (keydown)="onEnviarEnter(inputMensaje, $event)">
+      <input class="main-aside__submit__buttom" type="submit" value="Enviar" (click)="onEnviar(inputMensaje)">
+    </span>
+  </div>
+</aside>

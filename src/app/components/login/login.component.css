@@ -1,0 +1,74 @@
+/******* Cuerpo *******/
+.main-main {
+    padding-top: 60px;
+}
+
+.main-login__title {
+    text-align: center;
+    color: #830000;
+    padding-top: 40px;
+}
+
+/* Formulario */
+.login-form {
+    margin: auto;
+    width: 14.55em;
+}
+
+
+.login-form label,
+.login-form input {
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    border: 1px solid rgb(160, 160, 160);
+    padding: 0.2rem 0.5rem; 
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+    background: #e6ffec;
+    border-color: #004e1571;
+}
+
+.login-form label {
+    font-weight: bold;
+}
+
+.login-form input:invalid:focus {
+    border: 1px solid red;
+    background: rgb(250, 172, 172);
+  }
+
+    /* Botón */
+  .login-form input[type="submit"] {
+    background: #0d6124;
+    color: white;
+    border: 1.5px solid #0e4f1f;
+    padding: 0.5rem;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .login-form input[type="submit"]:hover,
+  .login-form input[type="submit"]:active {
+    background: white;
+    color: #0e4f1f;
+  }
+  
+
+  .login-form__auth {
+      border: 1px solid #830000;
+      border-radius: 5px;
+      color: #830000;
+      background-color: #fe66667a;
+      font-size: 0.75em;
+      padding: 5px;
+      text-align: center;
+  }

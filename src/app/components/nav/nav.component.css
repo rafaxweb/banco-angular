@@ -1,0 +1,58 @@
+/* Barra de navegación */
+.main-nav {
+    display: inline-block;
+    text-align: right;
+    vertical-align: middle;
+    width: calc(100% - 130px);
+}
+
+/* Barra de navegación */
+.main-nav__items,
+.main-nav__item,
+.main-nav__item>a {
+    color: rgb(0, 22, 0);
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    margin: 0px 4px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+/* Elementos barra de navegación al pasar cursor */
+.main-nav__item>a:hover,
+.main-nav__item>a:active {
+    color: white;
+    font-weight: 900;
+    border-top: 4px solid white;
+}
+
+/* Elementos barra de navegación */
+.main-nav__item_mensajes::before {
+    content: "✉ ";
+}
+
+/* Logout */
+.main-nav__item_logout a {
+    color: white;
+    background: #c90000;
+    border-top: 4px solid #c90000;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.main-nav__item_logout a:hover {
+    color: #c90000;
+    background-color: white;
+    border-bottom: none;
+}
+
+@media screen and (max-width: 580px) {
+    .main-nav {
+        width: 100%;
+        text-align: center;
+    }
+    .main-nav__item {
+        display: block;
+    }
+}
